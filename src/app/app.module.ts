@@ -1,26 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, AppRouting } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     FooterComponent,
-    HomeComponent,
-    LoginComponent,
     NavbarComponent,
-    ProfileComponent,
-    RegisterComponent
+    AppRouting
   ],
   imports: [
     BrowserModule,
