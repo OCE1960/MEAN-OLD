@@ -6,15 +6,21 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { SolutionsComponent } from './components/solutions/solutions.component';
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'solutions', component: SolutionsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'home', pathMatch: 'full', redirectTo: '' },
+  { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -26,5 +32,6 @@ export class AppRoutingModule { }
 
 export const AppRouting = [
   HomeComponent, LoginComponent, ProfileComponent, RegisterComponent,
-  DashboardComponent, PageNotFoundComponent
+  DashboardComponent, PageNotFoundComponent, AboutComponent, ContactComponent,
+  SolutionsComponent
 ];

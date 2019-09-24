@@ -1,1 +1,51 @@
-<p>register works!</p>
+<div id="requestInspection">
+
+    <div  class="requestInspection card">
+
+        <form  class="card-body"  [formGroup]="requestForm" (ngSubmit)="login()" >
+          <fieldset>
+            <legend>Registeration</legend>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" [class.is-invalid]="requestForm.get('name').invalid && requestForm.get('name').touched" class="form-control" id="name" #name formControlName="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+              <small [class.d-none]="requestForm.get('name').valid || requestForm.get('name').untouched" class="text-danger">
+                email Is Required
+              </small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" [class.is-invalid]="requestForm.get('email').invalid && requestForm.get('email').touched" class="form-control" id="email" #email formControlName="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small [class.d-none]="requestForm.get('email').valid || requestForm.get('email').untouched" class="text-danger">
+                  Email Is Required
+                </small>
+              </div>
+
+
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="username" [class.is-invalid]="requestForm.get('username').invalid && requestForm.get('username').touched" class="form-control" id="username" formControlName="username" placeholder="Phone No." required>
+              <small [class.d-none]="requestForm.get('username').valid || requestForm.get('username').untouched" class="text-danger">
+                  Username Is Required
+                </small>
+            </div>
+
+
+
+              <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" [class.is-invalid]="requestForm.get('password').invalid && requestForm.get('password').touched" class="form-control" id="password" #email formControlName="password" aria-describedby="PasswordHelp" placeholder="Enter Passsword" required>
+                  <small [class.d-none]="requestForm.get('password').valid || requestForm.get('password').untouched" class="text-danger">
+                    Password Is Required
+                  </small>
+                </div>
+
+
+
+            <button type="submit" class="btn btn-primary" [disabled]="!requestForm.valid">Submit Request for Inspection</button>
+          </fieldset>
+          </form>
+
+    </div>
+
+  </div>
